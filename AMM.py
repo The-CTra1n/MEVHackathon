@@ -55,7 +55,7 @@ class Pool:
             p = m_priceAB
             arb_qt = (-gamma*p*r1 + np.sqrt(gamma**3*p**3*r0*r1))/(gamma**2*p**2)
             profits = (- (r0 * r1) / (r0 + arb_qt * self.gamma) + r1)-arb_qt
-            self._update:inverse(p * arb_qt)
+            self._update_inverse(p * arb_qt)
         if profits <0:
             arb_qt = 0
             profits = 0
