@@ -9,7 +9,10 @@ NAME Protocol is a fully permissionless trading protocol that recovers part of t
 
 # MEV distribution
 
+For each protocol and independent auction is runned. Each auction can just accept transactions that access to the access list specified by the protocol. the bid of the winner auction is deposited to the LP.
+
 # Decentralized auctioners
+Auctioneers compete to properly run auctions with the specific design. Reputation & trust
 
 # Auction mechanism
 
