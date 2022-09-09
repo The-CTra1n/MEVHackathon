@@ -11,6 +11,8 @@ NAME Protocol is a fully permissionless trading protocol that recovers part of t
 
 Auctioneers create CFMM (in general, we will assume that are Uniswap V2 pools, however this can be generalized to different CFMM). The owner of the pools is saved in a variable owner. For each block, the first transaction of the block must change the bool variable **Trade** from **False** to **True**. In order to do so, the auctioneer must provide a signature of the blockNumber. The auctioneer imposes an auction mechanism to maximize their revenue. For each block, the auctioneer receives a set of bundles and transactions and construct the block with highest payload. Afterwards this payload can be splited among auctioneer, builder, LP providers and himself, to maximize the probablity of being included and to incentivize LP to provided liquidity.
 
+We forked the uniswap v2 protocol. We allow each auctioneer to create its own Uniwap V2 Factory and pool. Before trading, each auctionner has to execute the function **open()** to be able to trade. In the future we will make this more gas efficient (Multicall open).
+
 # MEV distribution
 
 The auctioneer have different ways of splitting the MEV profits among LP to increase his pools liquidity. We will propose two categories to split the MEV.
@@ -22,7 +24,9 @@ The auctioneer have different ways of splitting the MEV profits among LP to incr
 
 Auctioneers compete to properly run auctions with the specific design. To enforce proper behaviour, the auctionner creates
 
-# Auction cooperation
+# Auctioneers cooperation
+
+To be more capital, gas and MEV efficient, auctioneers can create collaborative factories using multisig keys. To do so, auctionners must trust each other (using smart contract diposits or using other methods).
 
 # Auction mechanism example
 
