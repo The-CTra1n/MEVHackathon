@@ -18,9 +18,11 @@ The auctioneer have different ways of splitting the MEV profits among LP to incr
 - Ex-ante: The LP can add and remove liquidity in time $t_1,t_2,...$. Each slot of time $[t_i,t_{i+1}]$ the auctioneer commits to a payment in function of the variance and the price of the assets. This mechanism can be coded using a smart conctract and off-chain (and also on-chain) oracles. In general, this method is safer for the liquidity provider but generates more risk to the auctioneer. This will be translated to smaller payement to the LP since the auctioneer has to hedge the risk.
 - Ex-post: The LP can add and remove liquidity in time $t_1,t_2,...$. The auctioneer reapays to the LPs a proportion of the MEV extracted per block. This method does not incurr any risk to the auctioneer. Moreover, is more capital efficient (no need of locking capital at time $t_i$). However, this is sensitive auctioneer deviations and off chain agreements between the auctionner and the Proposal. This leads to a higher need of trust among LPs and auctioneers.
 
-# Decentralized auctioners
+# Auctioneers competition
 
 Auctioneers compete to properly run auctions with the specific design. To enforce proper behaviour, the auctionner creates
 
-# Auction mechanism
+# Auction cooperation
+
+# Auction mechanism example
 
